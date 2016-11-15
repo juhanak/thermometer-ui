@@ -23,8 +23,8 @@ const config = {
   // ----------------------------------
   // Server Configuration
   // ----------------------------------
-  server_host : ip.address(), // use string 'localhost' to prevent exposure on local network
-  server_port : process.env.PORT || 3000,
+  server_host : process.env.SERVER_URL || ip.address(), // use string 'localhost' to prevent exposure on local network
+  server_port : process.env.PORT || 80,
 
   // ----------------------------------
   // Compiler Configuration
