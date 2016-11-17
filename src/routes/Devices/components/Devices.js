@@ -13,7 +13,7 @@ export class Devices extends React.Component {
   render () {
     return (
       <div style={{ margin: '0 auto' }} >
-        <h2>Devices:</h2>
+        <h2>Devices</h2>
         <ul className='dev-list'>
           { this.props.devices.map(device => <li> <Link to={'/details/' + device.iddevice} >{device.iddevice}</Link> </li>) }
         </ul>

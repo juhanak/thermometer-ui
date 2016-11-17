@@ -4,7 +4,7 @@ import './HomeView.scss'
 
 export const HomeView = () => (
   <div>
-    <h4>Welcome to sample how to load temperature data from Azure!</h4>
+    <h4>Hello stranger!</h4>
     <img
       className='thermo'
       src={Thermometer} />

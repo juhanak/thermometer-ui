@@ -30,10 +30,14 @@ export class Details extends React.Component {
           margin={{ top: 10, bottom: 50, left: 50, right: 10 }}
           xAxis={{ innerTickSize: 100, label: 'x-label' }}
           yAxis={{ label: 'y-label' }}
+          yMin={10}
+          yMax={30}
           x={xAccessor}
           y={yAccessor}
           values={valuesAccessor}
         />
+        
+        <h4>Last Measurements</h4>
         <ul className='dev-list'>
           { this.props.temperatures.map(measurement => <li> {measurement.temperature} </li>) }
         </ul>
@@ -46,7 +50,9 @@ export class Details extends React.Component {
 const getTemperatures = (state) => {
   return state.details
 }
-const tenLast = createSelector(getTemperatures, (temperatures) => { return temperatures.slice(-10) })
+const tenLast = createSelector(getTemperatures, (temperatures) => {
+  return temperatures.slice(-10)
+})
 
 Details.propTypes = {
   temperatures : React.PropTypes.array.isRequired,
